@@ -22,7 +22,7 @@ We simulate **5 biomarkers** in EB patients:
 st.markdown("## **ODE System for EB Biomarkers**")
 st.latex(r"""
 \begin{aligned}
-\frac{dC}{dt} &= ((k_{C0} + \delta) + k_{C1} (1 - A / A_0)) C \cdot \max(0, 1 - C / K_C) + k_{C2} (1 - B / B_0) \\
+\frac{dC}{dt} &= (k_{C0} + k_{C1} (1 - A / A_0)) C \cdot \max(0, 1 - C / K_C) * (1 + \delta) + k_{C2} (1 - B / B_0) \\
 \frac{dH}{dt} &= - k_{H1} (C - C_0) - k_{H2} (1 - I / I_0) + k_{H3} (H_0 - H) \\
 \frac{dB}{dt} &= k_{B0} (B_0 - B) - k_{B1} (C - C_0) + k_{B2} (H_0 - H) - k_{B3} (1 - A / A_0) \\
 \frac{dA}{dt} &= k_{A0} (A_0 - A) - k_{A1} (C - C_0) - k_{A2} (1 - B / B_0) \\
